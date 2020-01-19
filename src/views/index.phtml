@@ -19,19 +19,7 @@
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
             <div class="form-row">
                 <div class="col">
-                    <input type="text" class="form-control" name="num1" placeholder="Number1">
-                </div>
-                <div class="col">
-                    <select class="custom-select" name="operator">
-                        <option selected>None</option>
-                        <option value="add">+</option>
-                        <option value="subtract">-</option>
-                        <option value="multiply">*</option>
-                        <option value="divide">/</option>
-                    </select>
-                </div>
-                <div class="col">
-                    <input type="text" class="form-control" name="num2" placeholder="Number2">
+                    <input type="text" class="form-control" name="expression" placeholder="Write your expression here">
                 </div>
             </div>
             <button type="submit" name="submit" value="submit" class="btn btn-primary">Calculate</button>
