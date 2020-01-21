@@ -1,6 +1,5 @@
 <?php
 require 'InfixToPostfix.php';
-
 use PHPUnit\Framework\TestCase;
 
 class InfixToPostfixTest extends TestCase {
@@ -12,6 +11,16 @@ class InfixToPostfixTest extends TestCase {
         $infixToPostfix = new InfixToPostfix();
         $result = $infixToPostfix->infixToPostfix($example);
         $this->assertIsString($result);
+    }
+
+    /**
+     * @dataProvider additionProvider
+     * @param $example
+     */
+    public function testInfixToPostfixForNull($example) {
+        $infixToPostfix = new InfixToPostfix();
+        $result = $infixToPostfix->infixToPostfix($example);
+        $this->assertNotNull($result);
     }
 
     public function additionProvider()
