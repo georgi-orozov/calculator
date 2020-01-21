@@ -1,5 +1,5 @@
 <?php
-require_once('models/Stack.php');
+require_once('Stack.php');
 
 class PostfixCalculation {
     public function __construct() {

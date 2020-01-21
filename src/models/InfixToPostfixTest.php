@@ -1,6 +1,5 @@
 <?php
 require 'InfixToPostfix.php';
-
 use PHPUnit\Framework\TestCase;
 
 class InfixToPostfixTest extends TestCase {
