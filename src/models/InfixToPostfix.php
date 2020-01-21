@@ -1,5 +1,5 @@
 <?php
-require_once('models/Stack.php');
+require_once('Stack.php');
 
 class InfixToPostfix {
 
@@ -11,13 +11,13 @@ class InfixToPostfix {
         // Initialising empty stack
         $stack = new Stack();
         // Getting the infix expression and turning it into array
-        $array = str_split($infix);
+        $infixArray = str_split($infix);
         // Initialising empty string for the postfix expression
         $postfix = "";
 
 
-        for ($i = 0; $i < count($array); $i++) {
-            $char = $array[$i];
+        for ($i = 0; $i < count($infixArray); $i++) {
+            $char = $infixArray[$i];
 
             // if the character is operand, add it to the postfix expression
             if($this->isOperand($char)) {
@@ -64,7 +64,7 @@ class InfixToPostfix {
         return $postfix;
     }
 
-    public function isOperator($char) {
+    private function isOperator($char) {
         if($char == "+" || $char == "-" || $char == "*" || $char == "/" || $char == "^") {
             return true;
         }
@@ -73,11 +73,11 @@ class InfixToPostfix {
         }
     }
 
-    public function isOperand($char) {
+    private function isOperand($char) {
         return is_numeric($char);
     }
 
-    public function findPrecedence($char) {
+    private function findPrecedence($char) {
         switch ($char){
             case "+":
             case "-":
