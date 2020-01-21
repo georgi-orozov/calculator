@@ -14,6 +14,16 @@ class InfixToPostfixTest extends TestCase {
         $this->assertIsString($result);
     }
 
+    /**
+     * @dataProvider additionProvider
+     * @param $example
+     */
+    public function testInfixToPostfixForNull($example) {
+        $infixToPostfix = new InfixToPostfix();
+        $result = $infixToPostfix->infixToPostfix($example);
+        $this->assertNotNull($result);
+    }
+
     public function additionProvider()
     {
         return [
