@@ -1,5 +1,5 @@
 <?php
-require 'PostfixCalculation.php';
+require 'src/models/PostfixCalculation.php';
 use PHPUnit\Framework\TestCase;
 
 class PostfixCalculationTest extends TestCase {

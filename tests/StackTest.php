@@ -1,5 +1,5 @@
 <?php
-require 'Stack.php';
+require 'src/models/Stack.php';
 use PHPUnit\Framework\TestCase;
 
 class StackTest extends TestCase{
