@@ -12,6 +12,11 @@ class Stack {
         $this->limit = $limit;
     }
 
+    /**
+     * @description Adding item to the stack
+     * @param $item
+     * @throws RuntimeException - if the stack is full
+     */
     public function push($item) {
         // trap for stack overflow
         if (count($this->stack) < $this->limit) {
@@ -22,6 +27,10 @@ class Stack {
         }
     }
 
+    /**
+     * @return mixed - the top element, if the stack is not empty
+     * @throws RuntimeException - if the stack is empty
+     */
     public function pop() {
         if ($this->isEmpty()) {
             // trap for stack underflow
@@ -32,10 +41,16 @@ class Stack {
         }
     }
 
+    /**
+     * @return mixed - the top element, if the stack is not empty, false - otherwise
+     */
     public function top() {
         return current($this->stack);
     }
 
+    /**
+     * @return bool - true if the stack is empty, false - otherwise
+     */
     public function isEmpty() {
         return empty($this->stack);
     }
