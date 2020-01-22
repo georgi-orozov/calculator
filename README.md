@@ -14,7 +14,7 @@ expressions, long up to 20 characters. At the moment, it can deal only with expr
 
 - 1+5*(9-1) will give result: 41
 - (1+3)*(6-4) will give result: 8
-- (7*9)*(2+3*(2^6)) will give result: 12222
+- (7\*9)\*(2+3*(2^6)) will give result: 12222
 
 ## Running Unit Tests
 
